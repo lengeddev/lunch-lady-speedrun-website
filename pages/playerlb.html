@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - Lunch Lady Speedruning</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>    
+</head>
+
+<body class="dark">
+    <!-- Top Navigation Bar -->
+    <header id="header">
+        <div id="top-nav">
+            <!-- Logo -->
+            <img src="../assets/images/lltitle.png" class="header-logo" alt="Lunch Lady Logo">
+            
+            <div class="nav-container">
+                <button id="home-btn">Home</button>
+                <button id="leaderboard-btn">Leaderboard</button>
+                <button id="playerlb-btn">Players</button>
+                <button id="myProfileButton">My Profile</button>
+                <button id="league-btn">League</button>
+                <button id="login-btn">Login</button>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="player-leaderboard-container" class="card">
+        <h1>Player Leaderboard</h1>
+
+        <div class="leaderboard-buttons-container">
+            <button class="leaderboard-button" data-category="weight">Weight</button>
+            <button class="leaderboard-button" data-category="leaguePoints">League Points</button>
+            <!-- Add more buttons here for other categories -->
+        </div>
+        
+
+        <!-- Leaderboard Table -->
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Dynamic leaderboard rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 burcksley male. All rights reserved.</p>
+            <p>Created for the fans of <strong>Lunch Lady</strong> Speedrunning!</p>
+            <p>This website and its creators have no connection with or endorsement from Lunch Lady or its developers.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/utils.js" type="module"></script>
+    <script src="../scripts/playerlb.js" type="module"></script>
+    <script src="../scripts/firebase.js" type="module"></script>
+    <script src="../scripts/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,1052 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(44, 44, 44, 0.3);
+    color: #fff;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Default Dark Theme */
+body.dark {
+    background: linear-gradient(135deg, #121212, #333);
+    color: #e0e0e0;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header (Top Navigation) */
+#top-nav {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#top-nav:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.header-logo {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-container button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.nav-container button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Adjust body padding for fixed navigation */
+main {
+    padding-top: 80px;
+}
+
+/* Card Sections */
+.card {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Profile Page Styling */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.profile-card {
+    margin-left: 60px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    padding: 40px;
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    color: #fff;
+}
+
+.player-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.player-bio {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats-card {
+    text-align: center;
+    width:1000px;
+    margin-top: 40px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    margin-top: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e0e0e0; /* Light text for contrast */
+}
+
+/* achievements section */
+.achievement-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background: #222; /* Dark background */
+    color: #fff; /* Light text */
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.achievement-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 4px;
+    border: 1px solid #666; /* Image border for better contrast */
+}
+
+.achievement-card.unlocked {
+    border-color: #4caf50; /* Green for unlocked */
+    background: linear-gradient(135deg, #1b3b1b, #2a5c2a); /* Greenish dark gradient */
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3); /* Glow effect for unlocked */
+}
+
+.achievement-card.locked {
+    border-color: #555;
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e); /* Grayish dark gradient */
+    opacity: 0.7; /* Slightly dimmed */
+}
+
+.achievement-card:hover {
+    transform: scale(1.05); /* Slight enlargement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* More prominent shadow on hover */
+}
+
+.achievement-info {
+    flex-grow: 1;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.unlocked .status {
+    color: #fff;
+    background: #4caf50; /* Bright green for unlocked badge */
+    border: 1px solid #388e3c; /* Slightly darker green border */
+}
+
+.locked .status {
+    color: #ccc;
+    background: #444; /* Dark gray badge for locked */
+    border: 1px solid #666; /* Slightly lighter gray border */
+}
+
+/* Optional: Add some hover effects for locked achievements */
+.locked:hover {
+    opacity: 0.9; /* Lighten a bit on hover */
+}
+
+#achievements p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Personal Bests Section */
+.best-times-section {
+    padding: 16px;
+    text-align: center;
+}
+
+
+/* Dark-themed table */
+#best-times-table {
+    width: 100%;
+    border-collapse: separate; /* Keep vertical spacing between rows */
+    border-spacing: 0 20px; /* Increase the vertical spacing between rows (change 10px to 20px or more) */
+    margin-top: 20px;
+}
+
+/* Table header styles */
+#best-times-table th {
+    padding: 12px 15px;
+    background-color: #c5c5c528;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff88; /* Add a bottom border to header */
+}
+
+/* Table body styles */
+#best-times-table td {
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #bbb;
+    background-color: #3333335b;
+    border-top: 2px solid #555; /* Vertical separation between rows */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Row separation (vertical spacing between rows) */
+#best-times-table tr {
+    background-color: #33333375;
+    transition: all 0.3s ease;
+    border-radius: 12px; /* Round corners for the entire row */
+    padding: 0; /* Ensure no internal padding on rows */
+}
+
+/* Hover effect on rows */
+#best-times-table tr:hover {
+    background-color: #5f5f5faf;
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternate row colors for better distinction */
+#best-times-table tr:nth-child(even) {
+    background-color: #2a2a2a36; /* Slightly darker for even rows */
+}
+
+/* Hover effect on rows */
+#best-times-table tr:nth-child(even):hover {
+    background-color: #5f5f5faf;
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the place column */
+#best-times-table td:first-child {
+    text-align: center;
+    font-weight: bold;
+    background-color: #8d42428c;
+    color: #fff;
+    border-left: 2px solid #d8d8d870; /* Left border for place column */
+}
+
+/* Style for links in the table */
+#best-times-table a {
+    color: #ff1e1e96;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#best-times-table a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+    #best-times-table th, #best-times-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #personal-bests-card {
+        padding: 15px;
+    }
+}
+
+/* Base style for the rank box */
+#player-rank {
+    margin-top: 13px;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    opacity: 80%;
+    color:#ffffff;
+}
+
+/* Bronze style */
+.bronze-box {
+    background: linear-gradient(45deg, #db8d3f, #664011);  /* Bronze gradient */
+    border-color: #a6732a; /* Slightly darker border */
+    color: #fff; /* White text for contrast */
+}
+
+/* Silver style */
+.silver-box {
+    background: linear-gradient(45deg, #c0c0c0, #747474);  /* Silver gradient */
+    border-color: #a9a9a9; /* Slightly darker border */
+    color: #000; /* Black text for contrast */
+}
+
+/* Gold style */
+.gold-box {
+    background: linear-gradient(45deg, #ffd700, #b69928);  /* Gold gradient */
+    border-color: #e6b800; /* Slightly darker border */
+    color: #000; /* Black text for contrast */
+}
+
+/* Platinum style */
+.platinum-box {
+    background: linear-gradient(45deg, #e2faff, #89a9b4);  /* Diamond (light blue) gradient */
+    border-color: #89c7e7; /* Slightly darker border */
+    color: #000; /* Black text for contrast */
+}
+
+/* Diamond style */
+.diamond-box {
+    background: linear-gradient(45deg, #b9f2ff, #7ec8e3);  /* Diamond (light blue) gradient */
+    border-color: #89c7e7; /* Slightly darker border */
+    color: #000; /* Black text for contrast */
+}
+
+/* Legend style */
+.legend-box {
+    background: linear-gradient(45deg, #ffa1fa, #a143a1);  /* Diamond (light blue) gradient */
+    border-color: #ffffff; /* Slightly darker border */
+    color: #000; /* Black text for contrast */
+}
+
+/* Default style for unranked or unknown ranks */
+.default-box {
+    background-color: #f0f0f0; /* Light gray */
+    border-color: #d6d6d6; /* Slightly darker gray */
+    color: #000; /* Black text */
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: -57px; /* Initially off-screen (hidden) */
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: fixed;
+    width: 100%;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, bottom 0.3s ease;
+}
+
+/* Hover Effect for Footer */
+footer:hover {
+    transform: scale(1.05);
+    bottom: 0px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover effects for all buttons */
+button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Adjustments for Mobile Layout */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-container button {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    #homepage-section {
+        padding: 15px;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .profile-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Map Selection Section */
+#map-selection {
+    margin-top: 130px;
+    width: 40%;
+    align-self: center;
+}
+
+#map-selection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#map-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#map-selector button {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+#map-selector button:hover {
+    background: rgba(255, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Leaderboard Section */
+#leaderboard-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#leaderboard-container {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, rgba(90, 90, 90, 0.151), rgba(94, 94, 94, 0.267));
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Table Styles */
+#leaderboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#leaderboard-container th, #leaderboard-container td {
+    padding: 14px 18px;
+    text-align: center;
+    border: none;
+}
+
+/* Header Styling */
+#leaderboard-container th {
+    background-color: rgba(68, 68, 68, 0.377);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Data Cell Styling */
+#leaderboard-container td {
+    background-color: rgba(51, 51, 51, 0.336);
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Row Hover Effect */
+#leaderboard-container tr:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+}
+
+/* Link Styling */
+#leaderboard-container td a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styling for Dark Mode */
+body.dark #leaderboard-container td a {
+    color: #e0e0e0;
+}
+
+/* Add a subtle "pop-out" effect on hover */
+#leaderboard-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    #leaderboard-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #leaderboard-container table {
+        font-size: 0.9rem;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .profile-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Style for homepage section */
+#homepage-section {
+    text-align: center;
+}
+
+#homepage-section button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dark Theme for the Login Page */
+#auth-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 200px;
+    margin-left: 775px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Input Fields */
+#auth-section input[type="text"],
+#auth-section input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(60, 60, 60, 0.349);
+    color: #fff;
+    border: 1px solid rgba(80, 80, 80, 0.8);
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#auth-section input[type="text"]:focus,
+#auth-section input[type="password"]:focus {
+    background-color: rgba(90, 90, 90, 0.534);
+    border-color: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+#auth-section input[type="text"],
+#auth-section input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(60, 60, 60, 0.349);
+    color: #fff;
+    border: 1px solid rgba(80, 80, 80, 0.8);
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#auth-section input[type="text"]:focus,
+#auth-section input[type="email"]:focus {
+    background-color: rgba(90, 90, 90, 0.534);
+    border-color: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+/* Button Style - Dark Mode */
+#auth-section button {
+    margin-top: 30px;
+    padding: 15px 27px;
+    background-color: rgba(54, 54, 54, 0.39);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#auth-section button:hover {
+    background-color: #44444480;
+    transform: scale(1.05);
+}
+
+/* Adjustments for Mobile */
+@media screen and (max-width: 768px) {
+    #auth-section {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+
+/* leagues section */
+
+/* Wrapper for the entire leaderboard and sidebar layout */
+#league-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between sidebar and leaderboard */
+    width: 80%;
+    margin: 50px auto;
+    min-height: calc(100vh - 100px); /* Ensure both extend to bottom of page */
+}
+
+/* Combined box for sidebar and leaderboard */
+#league-container > div {
+    background-color: rgba(14, 14, 14, 0.493);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 100px); /* Extend to the bottom of the page */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
+}
+
+/* Hover effects for both containers */
+#league-container > div:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Sidebar styles */
+#season-sidebar {
+    flex: 0.6; /* Sidebar takes half of its previous width */
+    gap: 15px;
+}
+
+/* Style for the selected season button */
+#season-sidebar button.selected {
+    background-color: #ff00006b;
+    color: white;
+    font-weight: bold;
+}
+
+/* General button styling for the season buttons */
+#season-sidebar button {
+    display: block;
+    background-color: #ffffff3d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+#season-sidebar button:hover {
+    background-color: #ff000083;
+}
+
+/* Hover effect for other buttons */
+#season-sidebar button:hover:not(.selected) {
+    background-color: #ff000086; /* Keep the hover color the same for unselected buttons */
+}
+
+/* Leaderboard styles */
+#league-leaderboard {
+    flex: 3.5; /* Leaderboard takes up the remaining width */
+    padding-left: 20px;
+}
+
+/* Minimalistic leaderboard table */
+#league-leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: rgb(184, 184, 184);
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    text-align: center; /* Align text to the left for a clean look */
+}
+
+#league-leaderboard-table th, 
+#league-leaderboard-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11); /* Subtle divider */
+}
+
+/* Header styling for leaderboard */
+#league-leaderboard-table th {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3); /* Light background for distinction */
+}
+
+/* Simplified rows */
+#league-leaderboard-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle striping for rows */
+}
+
+#league-leaderboard-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight on hover */
+}
+
+/* Smooth fade transition for the leaderboard container */
+#league-leaderboard-container {
+    transition: opacity 0.3s ease; /* Smooth fade effect for leaderboard updates */
+}
+
+/* Links in leaderboard */
+#league-leaderboard-container a {
+    color: rgb(212, 212, 212); /* White text */
+    text-decoration: none; /* No underline */
+    transition: color 0.2s ease; /* Smooth transition on hover */
+    font-weight: bold;
+}
+
+#league-leaderboard-container a:hover {
+    color: #ffaaaa; /* Slightly dimmed text on hover */
+    text-decoration: none; /* Still no underline */
+}
+
+/* Sidebar container and leaderboard container should extend to full height */
+#league-container {
+    min-height: calc(100vh - 100px); /* Ensures it stretches to fill the screen */
+    height: auto; /* Make sure the flex container adjusts based on the content */
+}
+
+/* Ensures that the content of the containers grows and doesn't cut off */
+#league-container > div {
+    height: 100%; /* This forces the content to grow to fit the container */
+    overflow: auto; /* Allows scroll for overflowing content */
+}
+
+/* Leaderboard table rows */
+#league-leaderboard-table tbody tr {
+    display: table-row; /* Ensure rows are block-level elements, not flex */
+    width: 100%;
+}
+
+/* Heading container with centering */
+#heading-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Heading card styling */
+#heading-card {
+    background-color: rgba(14, 14, 14, 0.493); /* Dark theme with slight opacity */
+    color: rgb(201, 201, 201);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Adjust the width of the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+}
+
+/* Hover effect for the heading card */
+#heading-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Heading text */
+#heading-card h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* Adjust heading size */
+}
+
+/* Paragraph styling */
+#heading-card p {
+    margin-bottom: 20px;
+    font-size: 1.25rem; /* Adjust paragraph size */
+}
+
+/* player leaderboard */
+
+/* Style the profile picture next to the name */
+.profile-picture-small {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#player-leaderboard-container {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, rgba(90, 90, 90, 0.151), rgba(94, 94, 94, 0.267));
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 150px; /* Use top to push it down */
+}
+
+/* Table Styles */
+#player-leaderboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#player-leaderboard-container th, #player-leaderboard-container td {
+    padding: 14px 18px;
+    text-align: center;
+    border: none;
+}
+
+/* Header Styling */
+#player-leaderboard-container th {
+    background-color: rgba(68, 68, 68, 0.377);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Data Cell Styling */
+#player-leaderboard-container td {
+    background-color: rgba(51, 51, 51, 0.336);
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Row Hover Effect */
+#player-leaderboard-container tr:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+}
+
+/* Link Styling */
+#player-leaderboard-container td a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styling for Dark Mode */
+body.dark #player-leaderboard-container td a {
+    color: #e0e0e0;
+}
+
+/* Add a subtle "pop-out" effect on hover */
+#player-leaderboard-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    #player-leaderboard-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #player-leaderboard-container table {
+        font-size: 0.9rem;
+    }
+}
+
+.leaderboard-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.leaderboard-button {
+    background-color: #66666675;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.leaderboard-button:hover {
+    background-color: #666;
+    background-color: #ffffff50;
+}
+
+.leaderboard-button:active {
+    background-color: #333;
+}
+
+/* Style for the active (selected) leaderboard button */
+.active-button {
+    background-color: #ff00006b;
+    color: white; /* White text for contrast */
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+
+	<title>Leaderboards - Lunch Lady Speedruning</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>        
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <header id="header">
+        <div id="top-nav">
+            <!-- Logo -->
+            <img src="../assets/images/lltitle.png" class="header-logo" alt="Lunch Lady Logo">
+            
+            <div class="nav-container">
+                <button id="home-btn">Home</button>
+                <button id="leaderboard-btn">Leaderboard</button>
+                <button id="playerlb-btn">Players</button>
+                <button id="myProfileButton">My Profile</button>
+                <button id="league-btn">League</button>
+                <button id="login-btn">Login</button>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+    <!-- Map Selection and Leaderboard Section -->
+    <section id="map-selection" class="card">
+        <h2>Select a Map</h2>
+        <div id="map-selector" class="map-selector">
+        <!-- Map buttons will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Leaderboard Section (hidden by default) -->
+    <section id="leaderboard-section" class="card" style="display: none;">
+        <div id="leaderboard-container" class="leaderboard-container">
+            <!-- Leaderboard data will be dynamically added here -->
+            <div id="leaderboard-box"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 burcksley male. All rights reserved.</p>
+            <p>Created for the fans of <strong>Lunch Lady</strong> Speedrunning!</p>
+            <p>This website and its creators have no connection with or endorsement from Lunch Lady or its developers.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/firebase.js" type="module"></script>
+    <script src="../scripts/leaderboard.js" type="module"></script>
+    <script src="../scripts/utils.js" type="module"></script>
+    <script src="../scripts/index.js" type="module"></script>
+</body>
+</html>

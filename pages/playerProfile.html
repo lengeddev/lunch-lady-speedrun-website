@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Lunch Lady Speedruning</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>    
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header id="header">
+        <div id="top-nav">
+            <!-- Logo -->
+            <img src="../assets/images/lltitle.png" class="header-logo" alt="Lunch Lady Logo">
+            
+            <div class="nav-container">
+                <button id="home-btn">Home</button>
+                <button id="leaderboard-btn">Leaderboard</button>
+                <button id="playerlb-btn">Players</button>
+                <button id="myProfileButton">My Profile</button>
+                <button id="league-btn">League</button>
+                <button id="login-btn">Login</button>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-grid">
+            <!-- Profile Section -->
+            <div class="profile-card">
+                <div id="loading" class="loading-spinner" style="display: none;">Loading player data...</div>
+                <div id="profile-details" style="display: none;">
+                    <div class="profile-picture">
+                        <img src="../assets/images/user-placeholder.png" alt="Player Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="player-name">Unknown Player</h2>
+                        <p class="player-location">Location: Unknown</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="card stats-card">
+                <h2 class="card-title">Statistics</h2>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <h3>Rank</h3>
+                        <p id="player-rank">Unranked</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Weight</h3>
+                        <p id="totalRating">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>League Points</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="card achievements-card">
+                <h2 class="card-title">Achievements</h2>
+                <div id="achievements">
+                    <p>No achievements yet.</p>
+                </div>
+            </div>
+
+            <!-- Personal Bests Section -->
+            <div class="card best-times-section">
+                <h2 class="section-title">Personal Bests</h2>
+                <div class="best-times-content">
+                    <table id="best-times-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Map</th>
+                                <th>Time</th>
+                                <th>Video</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows dynamically added -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 burcksley male. All rights reserved.</p>
+        <p>Created for the fans of <strong>Lunch Lady</strong> Speedrunning!</p>
+        <p>This website and its creators have no connection with or endorsement from Lunch Lady or its developers.</p>
+    </footer>
+    
+    <script src="../scripts/firebase.js" type="module"></script>
+    <script src="../scripts/index.js" type="module"></script>
+    <script src="../scripts/utils.js" type="module"></script>
+    <script src="../scripts/playerProfile.js" type="module"></script>
+</body>
+</html>

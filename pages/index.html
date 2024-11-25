@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Lunch Lady Speedruning</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>    
+</head>
+<body class="dark">
+<!-- Top Navigation Bar -->
+<header id="header">
+    <div id="top-nav">
+        <!-- Logo -->
+        <img src="../assets/images/lltitle.png" class="header-logo" alt="Lunch Lady Logo">
+        
+        <div class="nav-container">
+            <button id="home-btn">Home</button>
+            <button id="leaderboard-btn">Leaderboard</button>
+            <button id="playerlb-btn">Players</button>
+            <button id="myProfileButton">My Profile</button>
+            <button id="league-btn">League</button>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <!-- Homepage Section -->
+        <section id="homepage-section" class="card">
+            <h2>Welcome to Lunch Lady Speedrunning!</h2>
+            <p>Explore the top speedruns of the game and see who holds the fastest times across different maps.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 burcksley male. All rights reserved.</p>
+            <p>Created for the fans of <strong>Lunch Lady</strong> Speedrunning!</p>
+            <p>This website and its creators have no connection with or endorsement from Lunch Lady or its developers.</p>
+        </div>
+    </footer>
+    
+    <script src="../scripts/utils.js" type="module"></script>
+    <script src="../scripts/firebase.js" type="module"></script>
+    <script src="../scripts/index.js" type="module"></script>
+</body>
+</html>
